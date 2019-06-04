@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.bg{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="container ">
+		<h1 class="task">Найди 6 кладов</h1>
+		<h1>Score: <span class="score">0</span></h1>
+		<!--ряд с буквами-->
+		<div class="row">
+			<div class="col-1 px-5 py-3  bg-warning text-center border"></div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>1</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>2</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>3</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>4</h4>
+			</div>
+			<div class="col-1 px-5  py-3 bg-warning text-center border">
+				<h4>5</h4>
+			</div>
+			<div class="col-1 px-5 py-3  bg-warning text-center border">
+				<h4>6</h4>
+			</div>
+		</div>
+		<!--первый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>A</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border exp"></div>
+			<div class="col-1  px-5 py-4 bg border ts"></div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+		</div>
+		<!--второй ряд-->
+		<div class="row">
+			<div class="col-1  px-5 py-4 bg-warning text-center border">
+				<h4>B</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border ts"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1 px-5 py-4  bg border exp"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+		</div>
+		<!--третий ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>C</h4>
+			</div>
+			<div class="col-1 px-5 py-4 bg border exp"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>
+			<div class="col-1 px-5 py-4  bg border ts"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>		
+		</div>
+		<!--четвертый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>D</h4>
+			</div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border ts"></div>
+			<div class="col-1  px-5 py-4 bg border exp"></div>
+		</div>
+		<!--пятый ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4  bg-warning text-center border">
+				<h4>E</h4>
+			</div>
+			<div class="col-1 px-5 py-4  bg border ts"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>
+			<div class="col-1 px-5 py-4  bg border exp"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>
+			<div class="col-1 px-5 py-4  bg border promax"></div>
+			<div class="col-1  px-5 py-4 bg border promax"></div>
+		</div>
+		<!--шестой ряд-->
+		<div class="row">
+			<div class="col-1 px-5 py-4 bg-warning text-center border">
+				<h4>F</h4>
+			</div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+			<div class="col-1 px-5 py-4 bg border exp"></div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+			<div class="col-1 px-5 py-4 bg border ts"></div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+			<div class="col-1 px-5 py-4 bg border promax"></div>
+		</div>
+	</div>
+<script type="text/javascript">
+	let exp = document.querySelectorAll(".exp")
+	let promax = document.querySelectorAll(".promax")
+	let ts = document.querySelectorAll(".ts")
+	let points = 0
+
+
+
+for(let index = 0; index<24; index = index + 1){
+		promax[index].onclick = function(){
+ 		promax[index].style.backgroundImage = "url('mem.jpg')"
+        promax[index].style.backgroundSize = "100%"
+
+ 	}
+}
+for(let index = 0; index<6; index = index + 1){
+		exp[index].onclick = function(){
+ 		exp[index].style.backgroundImage = "url('bang.png')"
+        exp[index].style.backgroundSize = "100%"
+        points = points - 1
+			document.querySelector(".score").innerHTML = points;
+ 	}
+}
+for(let index = 0; index<6; index = index + 1){
+		ts[index].onclick = function(){
+ 		ts[index].style.backgroundImage = "url('treasure.png')"
+        ts[index].style.backgroundSize = "100%"
+        points = points + 1
+			document.querySelector(".score").innerHTML = points;
+ 	}
+}
+
+
+
+
+
+</script>
+</body>
+</html>
